@@ -79,6 +79,6 @@ FLASK_ENV=development FLASK_APP=app.py flask run
 
 ## References :
 This app is used for learning purpose and therefore some of the  resources are from : 
-- [ConvNeXt official repo]([https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html](https://github.com/facebookresearch/ConvNeXt))
+- [ConvNeXt official repo](https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html](https://github.com/facebookresearch/ConvNeXt)
 - [ConvNeXt paper](https://arxiv.org/pdf/2201.03545v2.pdf)
 
