@@ -81,7 +81,7 @@ docker build -t pyt .
 docker run -p 127.0.0.1:80:80 --name dogs_flask --rm pyt
 ```
 
-Now go to 127.0.0.1:80 in your browser and load :sweat_smile:jpg photo!
+Now go to 127.0.0.1:80 in your browser and load jpg photo!
 
 3) Or enter container and run it directly 
 ```
