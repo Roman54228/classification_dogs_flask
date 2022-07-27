@@ -5,6 +5,14 @@
 Model: ConvNeXtBase, 89M params, 15.4G FLOPS, acc=85.8% on ImageNet1k
 Was training only last fc layer, used pretrained weights from torchvision. Model is too large for full training on colab GPU.
 
+## Metrics
+
+| Accuracy      | F1Score.      |   Precision   |       Recall  |
+| ------------- | ------------- | ------------- | ------------- |
+| Content Cell  | Content Cell  |.              |               |
+| Content Cell  | Content Cell  |               |               |
+
+
 
 ## Clone repo
 ```
