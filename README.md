@@ -38,7 +38,8 @@ python inference.py --image_url your_url
 ## Run training from scratch
 
 ```
-python train.py #it will automatically run on downloaded dataset with validation after every epoch
+python train.py 
+#it will automatically run on downloaded dataset with validation after every epoch
 ```
 
 ```
