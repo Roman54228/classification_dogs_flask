@@ -1,20 +1,46 @@
-# pytorch-flask-app
-Simple app to provide inference with web interface, it will look like
-![image](snapshot.png)
+# Dogs classification with flask
 
+## Clone repo
+```
+git clone https://github.com/Roman54228/classification_dogs_flask.git
+cd classification_dogs_flask/
+```
 
+## Download dataset, weights and install dependencies
+```
+pip install -r requirements.txt
+bash download_dataset.sh
+```
 
-## Todo:
-- [x] create flask backend with pytorch prediction
-- [x] create simple frontend using html and css
-- [ ] dockerize app for deployments
+## Inference on url
+```
+python inference.py
+```
+Test on your own example
+```
+python inference.py --image_url your_url
+```
 
+## Run training from scratch
 
-## requirements 
-- pytorch>=1.0.0
-- torchvision
-- flask 
-- Pillow
+```
+python train.py #it will automatically run on downloaded dataset with validation after every epoch
+```
+
+```
+python train.py --train_path your_path/imagewoof2-320/train --val_path your_path/imagewoof2-320/val --epoch_size number_of_epochs
+```
+
+## Run validation on downloaded weights
+
+```
+python val.py
+```
+
+```
+python val.py --val_path your_path/imagewoof2-320/val
+```
+
 
 ## Run flask server 
 - clone this repo
