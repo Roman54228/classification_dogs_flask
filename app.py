@@ -57,7 +57,7 @@ def img_to_tensor(image_bytes):
             normalize,
         ])
     
-    img = Image.open(io.BytesIO(image_bytes))
+    img = Image.open(io.BytesIO(image_bytes)).convert('RGB')
     img_tensor = transform(img)
     img_tensor = img_tensor.unsqueeze(0)
     return img_tensor.to(device)
