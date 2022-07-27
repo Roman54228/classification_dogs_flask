@@ -70,18 +70,6 @@ FLASK_ENV=development FLASK_APP=app.py flask run
 ```
 
 
-## Run flask server 
-- clone this repo
-- run the following to launch flask server 
-```
-FLASK_ENV=development FLASK_APP=app.py flask run
-```
-- go to `http://127.0.0.1:5000` to see the front page rendered
-- upload image you have or you can got to this repo and upload `input.jpg`
-
-## Note:
-- to render all the changes you make in the code, use `SHIFT`+reload button on the browser. 
-
 
 ## References :
 This app is used for learning purpose and therefore some of the  resources are from : 
