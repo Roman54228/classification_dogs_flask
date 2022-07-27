@@ -16,7 +16,8 @@ Was training only last fc layer, used pretrained weights from torchvision. Model
 
 ## Clone repo
 ```
-git clone https://github.com/Roman54228/classification_dogs_flask.git && cd classification_dogs_flask
+git clone https://github.com/Roman54228/classification_dogs_flask.git
+cd classification_dogs_flask
 ```
 
 ## Download dataset, weights and install dependencies
