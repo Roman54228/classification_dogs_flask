@@ -7,10 +7,10 @@ Was training only last fc layer, used pretrained weights from torchvision. Model
 
 ## Metrics
 
-| Accuracy      | F1Score.      |   Precision   |       Recall  |
-| ------------- | ------------- | ------------- | ------------- |
-| Content Cell  | Content Cell  |.              |               |
-| Content Cell  | Content Cell  |               |               |
+| Accuracy      | F1Score.      |   
+| ------------- | ------------- | 
+| 92% | 92% |
+  
 
 
 
