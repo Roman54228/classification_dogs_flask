@@ -27,6 +27,9 @@ bash download_dataset.sh
 ```
 
 
+Simple app to provide inference with web interface, it will look like
+![image](snapshot.png)
+
 ## View in browser with Flask
 ```
 python3 app.py
@@ -66,8 +69,6 @@ python val.py --val_path your_path/imagewoof2-320/val
 
 ## Run flask app with docker 
 
-Simple app to provide inference with web interface, it will look like
-![image](snapshot.png)
 
 1) Build image
 ```
