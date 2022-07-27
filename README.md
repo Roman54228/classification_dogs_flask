@@ -1,5 +1,11 @@
 # Dogs classification with flask :dog2: :scream:
 
+## Description
+
+Model: ConvNeXtBase, 89M params, 15.4G FLOPS, acc=85.8% on ImageNet1k
+Was training only last fc layer, used pretrained weights from torchvision. Model is too large for full training on colab GPU.
+
+
 ## Clone repo
 ```
 git clone https://github.com/Roman54228/classification_dogs_flask.git
@@ -73,6 +79,6 @@ FLASK_ENV=development FLASK_APP=app.py flask run
 
 ## References :
 This app is used for learning purpose and therefore some of the  resources are from : 
-- [Pytorch Flask App Tutorial](https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html)
-- [Guide to Model deployment](https://heartbeat.fritz.ai/brilliant-beginners-guide-to-model-deployment-133e158f6717)
-- [Style CSS background](https://medium.com/@luclemo/styling-background-images-with-css-d9f44cb10a32)
+- [ConvNeXt official repo]([https://pytorch.org/tutorials/intermediate/flask_rest_api_tutorial.html](https://github.com/facebookresearch/ConvNeXt))
+- [ConvNeXt paper](https://arxiv.org/pdf/2201.03545v2.pdf)
+
