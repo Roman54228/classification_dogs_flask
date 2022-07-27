@@ -26,6 +26,12 @@ pip install -r requirements.txt
 bash download_dataset.sh
 ```
 
+
+## View in browser with Flask
+```
+python3 app.py
+```
+
 ## Inference on url
 ```
 python inference.py
