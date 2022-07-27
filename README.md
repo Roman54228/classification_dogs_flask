@@ -1,4 +1,4 @@
-# Dogs classification with flask
+# Dogs classification with flask :dog2: :scream:
 
 ## Clone repo
 ```
@@ -33,6 +33,8 @@ python train.py --train_path your_path/imagewoof2-320/train --val_path your_path
 
 ## Run validation on downloaded weights
 
+It will print Accuracy, F1Score, Precision and Recall at the end
+
 ```
 python val.py
 ```
@@ -40,6 +42,25 @@ python val.py
 ```
 python val.py --val_path your_path/imagewoof2-320/val
 ```
+
+## Run flask app with docker 
+
+Simple app to provide inference with web interface, it will look like
+![image](snapshot.png)
+
+1) Build image
+```
+docker build -t pyt .
+```
+
+2) Run app
+
+```
+docker run -p 127.0.0.1:80:80 --name dogs_flask --rm pyt
+```
+
+Now go to 127.0.0.1:80 in your browser and load :sweat_smile:jpg photo!
+
 
 
 ## Run flask server 
