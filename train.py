@@ -59,12 +59,12 @@ def train(model, train_loader, val_loaderm, num_epochs=15):
         inputs, labels = data[0].float().to(device), data[1].to(device)
         inputs = transf(inputs)
         
-	optimizer.zero_grad()
+        optimizer.zero_grad()
 
         outputs = model(inputs)
         loss = criterion(outputs, labels.squeeze())
-	loss.backward() 
-	train_accuracy(outputs, labels.squeeze())
+        loss.backward() 
+        train_accuracy(outputs, labels.squeeze())
 
         optimizer.step()
 
@@ -92,28 +92,28 @@ def train(model, train_loader, val_loaderm, num_epochs=15):
         loop_val = tqdm(val_loader)
         for id_v, data_v in enumerate(loop_val):
             
-	    images, labels = data_v[0].float().to(device), data_v[1].to(device)
-	    images = transf(images)
+          images, labels = data_v[0].float().to(device), data_v[1].to(device)
+          images = transf(images)
 	    
-    	    test_output = model(images.float())
-            pred_y = torch.max(test_output, 1)[1].data.squeeze()
-            _, predicted = torch.max(test_output.data, 1)
-            total += labels.size(0)
-            correct += (predicted == labels).sum().item()
+          test_output = model(images.float())
+          pred_y = torch.max(test_output, 1)[1].data.squeeze()
+          _, predicted = torch.max(test_output.data, 1)
+          total += labels.size(0)
+          correct += (predicted == labels).sum().item()
             
-    	    if labels.size(0) == 1:
-	        metric_labels = labels[0]
-   	    else:
-                metric_labels = labels.squeeze()
+          if labels.size(0) == 1:
+	          metric_labels = labels[0]
+          else:
+            metric_labels = labels.squeeze()
 
 
-	    valid_accuracy.update(test_output, metric_labels)
-            valid_f1.update(test_output, metric_labels)
-	    valid_precision.update(test_output, metric_labels)
-	    valid_recall.update(test_output, metric_labels)
+          valid_accuracy.update(test_output, metric_labels)
+          valid_f1.update(test_output, metric_labels)
+          valid_precision.update(test_output, metric_labels)
+          valid_recall.update(test_output, metric_labels)
 	    
-    	    loop.set_description(f"Val_Epoch [{epoch}/{num_epochs}]")     
-            accuracy = (pred_y == labels).sum().item() / float(labels.size(0))
+          loop_val.set_description(f"Val_Epoch [{epoch}/{num_epochs}]")     
+          accuracy = (pred_y == labels).sum().item() / float(labels.size(0))
     
 
     total_valid_accuracy = valid_accuracy.compute()
@@ -132,10 +132,10 @@ def train(model, train_loader, val_loaderm, num_epochs=15):
 
 
 
-if name == '__main__':
+if __name__ == '__main__':
 	parser = argparse.ArgumentParser(description='image classification training')
-	parser.add_argument('--train_path', type=str, default='/content/imagewoof2-320/train', help='Train dataset path')
-	parser.add_argument('--val_path', type=str, default='/content/imagewoof2-320/val', help='Val dataset path')
+	parser.add_argument('--train_path', type=str, default='imagewoof2-320/train', help='Train dataset path')
+	parser.add_argument('--val_path', type=str, default='imagewoof2-320/val', help='Val dataset path')
 	parser.add_argument('--epoch_size', type=int, default=15, help='Number of epochs')
 	args_opt = parser.parse_args()
 
