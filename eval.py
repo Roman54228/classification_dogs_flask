@@ -97,7 +97,6 @@ if __name__ == '__main__':
 
   mean, std = get_mean_std(val_loader)
   transf = transforms.Compose([
-    		transforms.RandomHorizontalFlip(p=0.6),
      		transforms.Normalize(mean, std)])
 
   device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
