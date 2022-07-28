@@ -24,6 +24,7 @@ cd classification_dogs_flask
 ```
 pip install -r requirements.txt
 bash download_dataset.sh
+bash download_weights.sh
 ```
 
 
