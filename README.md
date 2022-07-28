@@ -23,7 +23,6 @@ cd classification_dogs_flask
 ## Download dataset, weights and install dependencies
 ```
 pip install -r requirements.txt
-bash download_dataset.sh
 bash download_weights.sh
 ```
 
@@ -46,6 +45,9 @@ python inference.py --image_url your_url
 ```
 
 ## Run training from scratch
+```
+bash download_dataset.sh
+```
 
 ```
 python train.py 
