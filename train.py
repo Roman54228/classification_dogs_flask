@@ -1,7 +1,4 @@
-#llll
-#bebe
 from __future__ import print_function
-#bebele
 from __future__ import division
 import torch
 import torch.nn as nn
